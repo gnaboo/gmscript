@@ -7,7 +7,7 @@ gmscript is sort of a programming language. It's coded in python and prefix-base
 
 > Prefix-Based ? What does that even mean ?
 
-Well, to be honest, i don't really know. Contrarilly to python which uses indents and java which used this thingys `{}`, gmscript has a default prefix, `!` which is used before every command. When entering a `if` loop per exemple, the prefix will need to be defined and you will use this prefix instead of the other one inside the `if` loop.
+Well, to be honest, i don't really know. Contrarilly to python which uses indents and java which uses this thingys `{}`, gmscript has a default prefix, `!` which is used before every command. When entering a `if` loop per exemple, the prefix will need to be defined and you will use this prefix instead of the other one inside the `if` loop.
 
 > Wow ? How does it look ?
 

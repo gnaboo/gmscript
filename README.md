@@ -21,3 +21,7 @@ NewprefixLOL set $"variable2": $input $"what is your name"
 ! NewprefixLOL $end
 ! print $variable2
 ! print```
+
+> Does it have something to do with Modula Files ?
+
+Not at all ! The name was randomly choosed !

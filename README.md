@@ -9,6 +9,10 @@ gmscript is sort of a programming language. It's coded in python and prefix-base
 
 Well, to be honest, i don't really know. Contrarilly to python which uses indents and java which uses this thingys `{}`, gmscript has a default prefix, `!` which is used before every command. When entering a `if` loop per exemple, the prefix will need to be defined and you will use this prefix instead of the other one inside the `if` loop.
 
+> Does it have something to do with Modula Files ?
+
+Not at all ! The name was randomly choosed !
+
 > Wow ? How does it look ?
 
 ```c++

@@ -21,9 +21,16 @@ class _Command:
                     return True
         return False
 
-    def call(self):
+    def call(self, moreDetails = None):
         if(self.id == 0):
-            print("OUI !")
+            stringToPrint = ""
+            try:
+                moreDetails[0]
+                for i in moreDetails:
+                    stringToPrint = stringToPrint + str(i)
+            except:
+                stringToPrint = moreDetails
+            print(stringToPrint)
 
 
 printCommand = _Command("print", 0, ["PRINT", "Print", "echo"], True)

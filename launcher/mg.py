@@ -36,4 +36,4 @@ def interpret_code(script):
         
 
 if __name__=="__main__":
-    interpret_code(fetch_code("code"))
+    interpret_code(fetch_code("script"))

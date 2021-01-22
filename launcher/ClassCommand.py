@@ -31,9 +31,19 @@ class _Command:
             except:
                 stringToPrint = moreDetails
             print(stringToPrint)
+        elif(self.id == 1):
+            stringToPrint = ""
+            try:
+                moreDetails[0]
+                for i in moreDetails:
+                    stringToPrint = stringToPrint + str(i)
+            except:
+                stringToPrint = moreDetails
+            print(stringToPrint, end="")
 
 
 printCommand = _Command("print", 0, ["PRINT", "Print", "echo"], True)
+printfCommand = _Command("printf", 1, ["PRINF", "Printf", "PrintF"], True)
 
 """class CustomCommand(_Command):
     def __init__(self, name: str, alias: list, caracter: str = "!"):

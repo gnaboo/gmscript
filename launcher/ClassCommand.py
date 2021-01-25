@@ -43,14 +43,20 @@ class _Command:
 
         elif(self.id == 1):
             stringToPrint = ""
-            try:
+            try: #C'est une liste !
                 moreDetails[0]
                 for i in moreDetails:
                     stringToPrint = stringToPrint + str(i)
-                moreDetails = stringToPrint.split("%")
-                log(moreDetails)
-            except:
-                stringToPrint = moreDetails
+
+                moreDetails = stringToPrint.split(" ")
+                for i in range(len(moreDetails)):
+                    if(moreDetails[i].startswith("%")):
+                        if(not (getVariable(moreDetails[i][1:]).startswith("NameError"))):
+                            moreDetails[i] = getVariable(moreDetails[i][1:])
+                        stringToPrint = " ".join(moreDetails)
+
+            except: #C'est une string !
+                stringToPrint = "InternalUnknownError. Please contact the developers"
             print(stringToPrint, end="")
 
         elif(self.id == 2):

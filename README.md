@@ -25,3 +25,7 @@ NewprefixLOL set $"variable2": $input $"what is your name"
 ! NewprefixLOL $end
 ! print $variable2
 ! print```
+
+> Huh wtf dude ? Is there a documentation ?
+
+Of course ! You can acces the documentation by [clicking here !](documentation.md)

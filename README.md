@@ -16,7 +16,7 @@ Not at all ! The name was randomly choosed !
 
 > Huh wtf dude ? Is there a documentation ?
 
-Of course ! You can acces the documentation by [clicking here !](documentation.md)
+Of course ! You can acces the documentation by [clicking here !](https://github.com/gnaboo/gmscript/blob/main/Documentation.md)
 
 > Wow ? How does it look ?
 

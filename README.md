@@ -13,6 +13,11 @@ Well, to be honest, i don't really know. Contrarilly to python which uses indent
 
 Not at all ! The name was randomly choosed !
 
+
+> Huh wtf dude ? Is there a documentation ?
+
+Of course ! You can acces the documentation by [clicking here !](documentation.md)
+
 > Wow ? How does it look ?
 
 ```c++
@@ -25,7 +30,3 @@ NewprefixLOL set $"variable2": $input $"what is your name"
 ! NewprefixLOL $end
 ! print $variable2
 ! print```
-
-> Huh wtf dude ? Is there a documentation ?
-
-Of course ! You can acces the documentation by [clicking here !](documentation.md)

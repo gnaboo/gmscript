@@ -1,7 +1,6 @@
 #le fichier sera code.mg
 from ClassCommand import *
-
-interpret_status = {"isBasicDefined":False}
+variables = {}
 
 def splitBetweenCommandAndArgument(line):
     splited_line=line.split("$") #Le premier argument est la commande + un espace ou pas + le préfix
@@ -17,7 +16,6 @@ def unindentedCommandManager(line):
         arguments.append(splited_line[i+1])
 
     for i in instances:
-        #print(command)
         if(i.isCommand(command)):
             i.call(arguments)
 

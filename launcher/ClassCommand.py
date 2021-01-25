@@ -1,3 +1,4 @@
+from VariableManager import *
 instances = []
 
 class _Command:
@@ -24,27 +25,42 @@ class _Command:
     def call(self, moreDetails = None):
         if(self.id == 0):
             stringToPrint = ""
-            try:
+            try: #C'est une liste !
                 moreDetails[0]
                 for i in moreDetails:
                     stringToPrint = stringToPrint + str(i)
-            except:
-                stringToPrint = moreDetails
+
+                moreDetails = stringToPrint.split(" ")
+                for i in range(len(moreDetails)):
+                    if(moreDetails[i].startswith("%")):
+                        if(not (getVariable(moreDetails[i][1:]).startswith("NameError"))):
+                            moreDetails[i] = getVariable(moreDetails[i][1:])
+                        stringToPrint = " ".join(moreDetails)
+
+            except: #C'est une string !
+                stringToPrint = "InternalUnknownError. Please contact the developers"
             print(stringToPrint)
+
         elif(self.id == 1):
             stringToPrint = ""
             try:
                 moreDetails[0]
                 for i in moreDetails:
                     stringToPrint = stringToPrint + str(i)
+                moreDetails = stringToPrint.split("%")
+                log(moreDetails)
             except:
                 stringToPrint = moreDetails
             print(stringToPrint, end="")
 
+        elif(self.id == 2):
+            data1 = "".join(moreDetails)
+            data = data1.split(":")
+            variableName = data[0]
+            valueInAVariable = data[1]
+            createVariable(variableName, valueInAVariable)
+
 
 printCommand = _Command("print", 0, ["PRINT", "Print", "echo"], True)
 printfCommand = _Command("printf", 1, ["PRINF", "Printf", "PrintF"], True)
-
-"""class CustomCommand(_Command):
-    def __init__(self, name: str, alias: list, caracter: str = "!"):
-        super().__init__(name, alias, False, caracter)"""
+setVariableCommand = _Command("set", 2, ["SET", "Set", "setvar", "SETVAR", "SetVar"], True)

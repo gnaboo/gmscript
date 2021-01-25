@@ -1,6 +1,6 @@
 # GMScript
 
-### This was made by [gnaboo](twitter.com/GabrielGnaboo)
+### This was made by [gnaboo](https://www.twitter.com/GabrielGnaboo)
 
 
 ## Documentation :
